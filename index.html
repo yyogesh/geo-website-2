@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light-pro">
+<!--
+  ╔═══════════════════════════════════════════════════════════════╗
+  ║  GEOTECH PRO — Homepage                                      ║
+  ║  TO CHANGE THEME: edit data-theme on <html> above to:       ║
+  ║    dark-navy  |  light-pro  |  ocean-teal  |  carbon        ║
+  ╚═══════════════════════════════════════════════════════════════╝
+-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <meta name="theme-color" content="#070C18" />
+  <title>GeoTech Pro — Geospatial & Maritime Intelligence Solutions</title>
+  <meta name="description"
+    content="Advanced GIS mapping, subsea asset integrity management and maritime survey solutions for the world's most demanding environments." />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- ★ GEOTECH STYLESHEETS (order matters) ★ -->
+  <link rel="stylesheet" href="assets/css/theme.css"> <!-- 1. Theme tokens (colors) -->
+  <link rel="stylesheet" href="assets/css/main.css"> <!-- 2. Component styles -->
+  <link rel="stylesheet" href="assets/css/responsive.css"> <!-- 3. Breakpoints -->
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════
+     PRELOADER
+     ════════════════════════════════════════════════════════ -->
+  <div id="preloader" role="status" aria-label="Loading">
+    <div class="pl-wrap">
+      <div class="pl-logo">Geo<span>Tech</span> Pro</div>
+      <div class="pl-tagline">Intelligence Beyond the Surface</div>
+      <div class="pl-track">
+        <div class="pl-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+     THEME SWITCHER (desktop, fixed right side)
+     ════════════════════════════════════════════════════════ -->
+  <div class="theme-switcher" role="group" aria-label="Choose colour theme">
+    <div class="ts-label">Theme</div>
+    <button class="ts-btn active" data-t="dark-navy" title="Dark Navy" aria-label="Dark Navy theme">
+      <span class="ts-tip">Dark Navy</span>
+    </button>
+    <button class="ts-btn" data-t="light-pro" title="Light Pro" aria-label="Light Pro theme">
+      <span class="ts-tip">Light Pro</span>
+    </button>
+    <button class="ts-btn" data-t="ocean-teal" title="Ocean Teal" aria-label="Ocean Teal theme">
+      <span class="ts-tip">Ocean Teal</span>
+    </button>
+    <button class="ts-btn" data-t="carbon" title="Carbon" aria-label="Carbon theme">
+      <span class="ts-tip">Carbon</span>
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+     NAVBAR
+     ════════════════════════════════════════════════════════ -->
+  <nav id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav-wrap">
+
+      <a href="index.html" class="nav-brand" aria-label="GeoTech Pro home">
+        Geo<span>Tech</span> Pro
+        <small>Intelligence Solutions</small>
+      </a>
+
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li class="dropdown" role="none">
+          <a href="pages/solutions.html" role="menuitem" aria-haspopup="true">
+            Solutions <i class="bi bi-chevron-down" style="font-size:.58rem;margin-left:2px"></i>
+          </a>
+          <div class="drop-panel" role="menu">
+            <a href="pages/solutions.html#gis" role="menuitem"><i class="bi bi-map me-2"></i>GIS & Spatial Analytics</a>
+            <a href="pages/solutions.html#subsea" role="menuitem"><i class="bi bi-activity me-2"></i>Subsea
+              Integrity</a>
+            <a href="pages/solutions.html#maritime" role="menuitem"><i class="bi bi-compass me-2"></i>Maritime
+              Survey</a>
+            <a href="pages/solutions.html#construction" role="menuitem"><i class="bi bi-building me-2"></i>Offshore
+              Construction</a>
+          </div>
+        </li>
+        <li role="none"><a href="pages/products.html" role="menuitem">Products</a></li>
+        <li role="none"><a href="pages/services.html" role="menuitem">Services</a></li>
+        <li role="none"><a href="pages/case-studies.html" role="menuitem">Case Studies</a></li>
+        <li role="none"><a href="pages/about.html" role="menuitem">About</a></li>
+        <li role="none"><a href="pages/contact.html" class="nav-cta" role="menuitem">Get a Demo</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay Nav -->
+  <div class="m-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="m-close" id="mClose" aria-label="Close menu"><i class="bi bi-x"></i></button>
+    <a href="index.html">Home</a>
+    <a href="pages/solutions.html">Solutions</a>
+    <a href="pages/products.html">Products</a>
+    <a href="pages/services.html">Services</a>
+    <a href="pages/case-studies.html">Case Studies</a>
+    <a href="pages/about.html">About</a>
+    <a href="pages/contact.html" style="color:var(--accent-2)">Get a Demo</a>
+    <!-- Mobile theme row -->
+    <div class="m-theme-row" role="group" aria-label="Choose theme">
+      <button class="m-theme-btn" data-t="dark-navy" style="background:linear-gradient(135deg,#1471D8,#00CFEE)"
+        aria-label="Dark Navy"></button>
+      <button class="m-theme-btn" data-t="light-pro"
+        style="background:linear-gradient(135deg,#1461C4,#F4F7FC);border-color:#ccc" aria-label="Light Pro"></button>
+      <button class="m-theme-btn" data-t="ocean-teal" style="background:linear-gradient(135deg,#00A878,#00D4B0)"
+        aria-label="Ocean Teal"></button>
+      <button class="m-theme-btn" data-t="carbon" style="background:linear-gradient(135deg,#E07B20,#111)"
+        aria-label="Carbon"></button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <div class="hero-inner container-xl"
+      style="padding-top:150px;padding-bottom:80px;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;max-width:1380px;margin:0 auto;">
+
+      <!-- Left copy -->
+      <div class="hero-left">
+        <div class="hero-pill">
+          <span class="hero-dot" aria-hidden="true"></span>
+          Now Featuring AI-Powered Spatial Intelligence
+        </div>
+
+        <h1 class="hero-h1">
+          Precision <span class="grd">Geospatial</span><br>
+          &amp; Maritime<br>Intelligence
+        </h1>
+
+        <p class="hero-p">
+          From subsea asset integrity to real-time GIS mapping and offshore construction survey — GeoTech Pro delivers
+          mission-critical intelligence for the world's most demanding environments.
+        </p>
+
+        <div class="hero-btns">
+          <a href="pages/solutions.html" class="btn-pri">
+            Explore Solutions <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="pages/case-studies.html" class="btn-ghost">
+            <i class="bi bi-play-circle"></i> View Case Studies
+          </a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div>
+            <div class="hs-num">340<em>+</em></div>
+            <div class="hs-lbl">Projects Delivered</div>
+          </div>
+          <div>
+            <div class="hs-num">98<em>%</em></div>
+            <div class="hs-lbl">Client Retention</div>
+          </div>
+          <div>
+            <div class="hs-num">42<em>+</em></div>
+            <div class="hs-lbl">Countries Served</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Dashboard visual -->
+      <div class="hero-vis" aria-hidden="true">
+        <div class="dash-card">
+          <div class="dc-head">
+            <div class="dc-dots"><s></s><s></s><s></s></div>
+            <div class="dc-title">LIVE SPATIAL DASHBOARD · SECTOR 7G</div>
+          </div>
+          <div class="dc-map">
+            <svg width="100%" height="100%" viewBox="0 0 500 230" preserveAspectRatio="xMidYMid slice"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="500" height="230" fill="var(--map-bg)" />
+              <!-- Grid -->
+              <g stroke="var(--map-grid)" stroke-width="1">
+                <line x1="0" y1="46" x2="500" y2="46" />
+                <line x1="0" y1="92" x2="500" y2="92" />
+                <line x1="0" y1="138" x2="500" y2="138" />
+                <line x1="0" y1="184" x2="500" y2="184" />
+                <line x1="100" y1="0" x2="100" y2="230" />
+                <line x1="200" y1="0" x2="200" y2="230" />
+                <line x1="300" y1="0" x2="300" y2="230" />
+                <line x1="400" y1="0" x2="400" y2="230" />
+              </g>
+              <!-- Contour rings -->
+              <ellipse cx="250" cy="115" rx="130" ry="75" fill="none" stroke="var(--map-line)" stroke-opacity=".15"
+                stroke-width="1" />
+              <ellipse cx="250" cy="115" rx="86" ry="48" fill="none" stroke="var(--map-line)" stroke-opacity=".22"
+                stroke-width="1" />
+              <ellipse cx="250" cy="115" rx="46" ry="25" fill="none" stroke="var(--map-ping)" stroke-opacity=".28"
+                stroke-width="1.2" />
+              <circle cx="250" cy="115" r="7" fill="var(--map-line)" opacity=".5" />
+              <!-- Survey route -->
+              <polyline points="60,180 130,140 210,88 288,100 368,68 445,50" fill="none" stroke="var(--map-ping)"
+                stroke-width="1.5" stroke-opacity=".65" stroke-dasharray="5,3" />
+              <!-- Ping 1 -->
+              <circle cx="210" cy="88" r="4" fill="var(--map-ping)" opacity=".95" />
+              <circle cx="210" cy="88" r="10" fill="none" stroke="var(--map-ping)" stroke-opacity=".4"
+                stroke-width="1.2">
+                <animate attributeName="r" values="5;20;5" dur="2.2s" repeatCount="indefinite" />
+                <animate attributeName="stroke-opacity" values=".5;0;.5" dur="2.2s" repeatCount="indefinite" />
+              </circle>
+              <!-- Ping 2 -->
+              <circle cx="368" cy="68" r="4" fill="var(--map-line)" opacity=".9" />
+              <circle cx="368" cy="68" r="10" fill="none" stroke="var(--map-line)" stroke-opacity=".4"
+                stroke-width="1.2">
+                <animate attributeName="r" values="5;16;5" dur="2.8s" repeatCount="indefinite" begin=".7s" />
+                <animate attributeName="stroke-opacity" values=".5;0;.5" dur="2.8s" repeatCount="indefinite"
+                  begin=".7s" />
+              </circle>
+              <!-- Point 3 -->
+              <circle cx="130" cy="140" r="3" fill="var(--map-line)" opacity=".75" />
+              <!-- Glow -->
+              <ellipse cx="250" cy="115" rx="65" ry="38" fill="var(--map-line)" fill-opacity=".07" />
+              <!-- Labels -->
+              <text x="12" y="18" fill="var(--map-line)" fill-opacity=".4" font-size="8" font-family="monospace">57°24'N
+                002°08'E</text>
+              <text x="340" y="222" fill="var(--map-line)" fill-opacity=".4" font-size="8"
+                font-family="monospace">SURVEY ZONE ALPHA</text>
+            </svg>
+          </div>
+          <div class="dc-metrics">
+            <div class="dc-metric">
+              <div class="dc-m-val">14<em> kt</em></div>
+              <div class="dc-m-lbl">Vessel Speed</div>
+            </div>
+            <div class="dc-metric">
+              <div class="dc-m-val" style="color:var(--accent-2)">98<em>%</em></div>
+              <div class="dc-m-lbl">Coverage</div>
+            </div>
+            <div class="dc-metric">
+              <div class="dc-m-val">−342<em>m</em></div>
+              <div class="dc-m-lbl">Depth</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="f-badge t">
+          <div class="fb-ico"><i class="bi bi-shield-check"></i></div>
+          <div>
+            <div class="fb-lbl">Integrity Score</div>
+            <div class="fb-val">97.4%</div>
+          </div>
+        </div>
+        <div class="f-badge b">
+          <div class="fb-ico"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <div class="fb-lbl">Assets Tracked</div>
+            <div class="fb-val">1,284 Live</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+     TRUSTED BY
+     ════════════════════════════════════════════════════════ -->
+  <section id="trusted" aria-label="Trusted by">
+    <div class="container-xl">
+      <p class="trust-lbl">Trusted by world-leading energy, maritime &amp; infrastructure organisations</p>
+      <div class="trust-logos">
+        <div class="trust-item"><i class="bi bi-globe2"></i> ESRI Partner</div>
+        <div class="trust-item"><i class="bi bi-droplet-fill"></i> TotalEnergies</div>
+        <div class="trust-item"><i class="bi bi-water"></i> Equinor</div>
+        <div class="trust-item"><i class="bi bi-tsunami"></i> FUGRO</div>
+        <div class="trust-item"><i class="bi bi-lightning-fill"></i> BP Offshore</div>
+        <div class="trust-item"><i class="bi bi-building"></i> SLB</div>
+        <div class="trust-item"><i class="bi bi-compass"></i> EIVA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+     SERVICES
+     ════════════════════════════════════════════════════════ -->
+  <section id="services" class="section-pad" aria-labelledby="svc-heading">
+    <div class="container-xl">
+      <div class="sec-head">
+        <div class="badge-label center">What We Do</div>
+        <h2 class="sec-title" id="svc-heading">End-to-End <span class="grd">Spatial Intelligence</span></h2>
+        <p class="sec-desc">From the seafloor to satellite — our integrated platform connects GIS mapping, subsea
+          inspection, and offshore survey into one unified intelligence layer.</p>
+      </div>
+
+      <div class="svc-grid stagger">
+        <article class="svc-card feat fade-up">
+          <div class="svc-ico" aria-hidden="true"><i class="bi bi-map-fill"></i></div>
+          <h3>GIS &amp; Spatial Analytics</h3>
+          <p>Advanced mapping and spatial intelligence powered by AI — delivering actionable insights from complex
+            geodata at global scale.</p>
+          <a href="pages/services.html#gis" class="svc-lnk">Learn More <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="svc-card fade-up">
+          <div class="svc-ico" aria-hidden="true"><i class="bi bi-activity"></i></div>
+          <h3>Subsea Asset Integrity</h3>
+          <p>Real-time monitoring, ROV inspection data integration and predictive analytics for pipelines, risers and
+            subsea structures.</p>
+          <a href="pages/services.html#subsea" class="svc-lnk">Learn More <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="svc-card fade-up">
+          <div class="svc-ico" aria-hidden="true"><i class="bi bi-compass-fill"></i></div>
+          <h3>Maritime Survey</h3>
+          <p>Hydrographic survey, multibeam sonar processing and GNSS-based positioning for offshore construction and
+            environmental mapping.</p>
+          <a href="pages/services.html#maritime" class="svc-lnk">Learn More <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="svc-card fade-up">
+          <div class="svc-ico" aria-hidden="true"><i class="bi bi-cpu-fill"></i></div>
+          <h3>Digital Twin &amp; 3D Modelling</h3>
+          <p>High-fidelity 3D models of subsea and offshore infrastructure for engineering analysis, training
+            simulations and lifecycle management.</p>
+          <a href="pages/services.html#digital" class="svc-lnk">Learn More <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="svc-card fade-up">
+          <div class="svc-ico" aria-hidden="true"><i class="bi bi-robot"></i></div>
+          <h3>AI &amp; Predictive Analytics</h3>
+          <p>Machine learning models trained on years of inspection data to predict corrosion, failure risk and
+            maintenance windows before they become critical.</p>
+          <a href="pages/services.html#ai" class="svc-lnk">Learn More <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="svc-card fade-up">
+          <div class="svc-ico" aria-hidden="true"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+          <h3>Cloud Data Management</h3>
+          <p>Secure, scalable cloud infrastructure for storing, processing and sharing geospatial and integrity data
+            across global project teams.</p>
+          <a href="pages/services.html#cloud" class="svc-lnk">Learn More <i class="bi bi-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+     WHY US
+     ════════════════════════════════════════════════════════ -->
+  <section id="why" class="section-pad" aria-labelledby="why-heading">
+    <div class="container-xl">
+      <div class="why-grid">
+
+        <!-- Visual column -->
+        <div class="fade-left" style="position:relative;">
+          <div class="why-main">
+            <p
+              style="font-family:var(--font-display);font-size:.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;">
+              Project Performance · FY 2024
+            </p>
+            <div class="chart-area" aria-label="Performance bar chart">
+              <div class="bar-wrap">
+                <div class="bar" style="height:60%;--d:.1s" role="img" aria-label="Q1: 60%"></div>
+                <div class="bar-lbl">Q1</div>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar" style="height:72%;--d:.2s" role="img" aria-label="Q2: 72%"></div>
+                <div class="bar-lbl">Q2</div>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar" style="height:58%;--d:.3s" role="img" aria-label="Q3: 58%"></div>
+                <div class="bar-lbl">Q3</div>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar" style="height:88%;--d:.4s" role="img" aria-label="Q4: 88%"></div>
+                <div class="bar-lbl">Q4</div>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar" style="height:96%;--d:.5s" role="img" aria-label="2025: 96%"></div>
+                <div class="bar-lbl">2025</div>
+              </div>
+            </div>
+            <div class="why-row">
+              <span class="why-rlbl">On-Time Delivery</span>
+              <span class="why-rval">97.2%</span>
+              <span class="why-rbadge">↑ 4.1%</span>
+            </div>
+            <div class="why-row">
+              <span class="why-rlbl">Data Accuracy</span>
+              <span class="why-rval">99.8%</span>
+              <span class="why-rbadge">Industry Best</span>
+            </div>
+            <div class="why-row">
+              <span class="why-rlbl">Cost Reduction</span>
+              <span class="why-rval">−23% avg</span>
+              <span class="why-rbadge">↑ 6.3%</span>
+            </div>
+          </div>
+          <div class="why-side-badge">
+            <div class="why-bnum">18<em>+</em></div>
+            <div class="why-blbl">Years of deep subsea &amp; geospatial expertise</div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="fade-right">
+          <div class="badge-label">Why GeoTech Pro</div>
+          <h2 class="sec-title" id="why-heading">Built for <span class="grd">Critical Environments</span></h2>
+          <p style="margin-bottom:32px;">We don't just supply software — we embed intelligence into your operational
+            workflows with the precision that offshore and subsea environments demand.</p>
+
+          <div class="why-feats stagger">
+            <div class="why-feat fade-up">
+              <div class="wf-ico" aria-hidden="true"><i class="bi bi-shield-lock-fill"></i></div>
+              <div>
+                <h4>ISO 9001 &amp; DNV Certified</h4>
+                <p>Every output meets the strictest international standards in data quality, safety and integrity
+                  management.</p>
+              </div>
+            </div>
+            <div class="why-feat fade-up">
+              <div class="wf-ico" aria-hidden="true"><i class="bi bi-lightning-charge-fill"></i></div>
+              <div>
+                <h4>Real-Time Processing</h4>
+                <p>Sub-second data pipelines from vessel sensors, ROVs, and satellite feeds — no lag between field and
+                  decision room.</p>
+              </div>
+            </div>
+            <div class="why-feat fade-up">
+              <div class="wf-ico" aria-hidden="true"><i class="bi bi-people-fill"></i></div>
+              <div>
+                <h4>Dedicated Expert Teams</h4>
+                <p>Marine geophysicists, integrity engineers and GIS specialists embedded directly into your project
+                  from day one.</p>
+              </div>
+            </div>
+            <div class="why-feat fade-up">
+              <div class="wf-ico" aria-hidden="true"><i class="bi bi-diagram-3-fill"></i></div>
+              <div>
+                <h4>Seamless Integration</h4>
+                <p>Open APIs and native connectors for ESRI ArcGIS, Bentley, Aveva, SAP, and all major CMMS platforms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+     SOLUTIONS
+     ════════════════════════════════════════════════════════ -->
+  <section id="solutions" class="section-pad" aria-labelledby="sol-heading">
+    <div class="container-xl">
+      <div class="sol-header">
+        <div>
+          <div class="badge-label">Our Solutions</div>
+          <h2 class="sec-title" id="sol-heading">Industry-Specific <span class="grd">Platforms</span></h2>
+        </div>
+        <a href="pages/solutions.html" class="btn-ghost">View All <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="sol-tabs" role="tablist" aria-label="Solution filters">
+        <button class="sol-tab active" role="tab" aria-selected="true">All Solutions</button>
+        <button class="sol-tab" role="tab" aria-selected="false">Oil &amp; Gas</button>
+        <button class="sol-tab" role="tab" aria-selected="false">Renewables</button>
+        <button class="sol-tab" role="tab" aria-selected="false">Defence &amp; Survey</button>
+        <button class="sol-tab" role="tab" aria-selected="false">Infrastructure</button>
+      </div>
+
+      <div class="sol-grid">
+        <!-- Featured wide card -->
+        <article class="sol-card wide fade-up">
+          <div class="sol-img">
+            <div class="sol-grid-bg" aria-hidden="true"></div>
+            <i class="bi bi-water sol-img-icon" aria-hidden="true" style="font-size:3.8rem"></i>
+          </div>
+          <div class="sol-body" style="display:flex;flex-direction:column;justify-content:center;padding:40px;">
+            <span class="sol-tag">Flagship Platform</span>
+            <h3 style="font-size:1.5rem;">SubSea360™ Integrity Suite</h3>
+            <p style="margin:12px 0 26px;">The complete lifecycle management platform for subsea infrastructure.
+              Integrates ROV inspection, corrosion modelling, anomaly detection and regulatory reporting in one unified
+              environment. Trusted by operators managing over 12,000 km of pipelines globally.</p>
+            <a href="pages/products.html#subsea360" class="btn-pri" style="align-self:flex-start">
+              Explore Platform <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="sol-card fade-up">
+          <div class="sol-img">
+            <div class="sol-grid-bg" aria-hidden="true"></div>
+            <i class="bi bi-map sol-img-icon" aria-hidden="true"></i>
+          </div>
+          <div class="sol-body">
+            <span class="sol-tag">GIS</span>
+            <h3>MapCore™ Analytics</h3>
+            <p>Enterprise GIS platform with AI-driven spatial analysis, live satellite data fusion and real-time field
+              data collection for large-scale asset management.</p>
+          </div>
+        </article>
+
+        <article class="sol-card fade-up">
+          <div class="sol-img">
+            <div class="sol-grid-bg" aria-hidden="true"></div>
+            <i class="bi bi-tsunami sol-img-icon" aria-hidden="true"></i>
+          </div>
+          <div class="sol-body">
+            <span class="sol-tag">Maritime</span>
+            <h3>SurveyNav™ Pro</h3>
+            <p>End-to-end maritime survey and construction support — from route survey and geohazard assessment to
+              as-built verification and dredge monitoring.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+     STATS
+     ════════════════════════════════════════════════════════ -->
+  <section id="stats" class="section-pad-sm" aria-label="Company statistics">
+    <div class="container-xl">
+      <div class="stats-grid">
+        <div class="fade-up">
+          <div class="stat-n" data-target="340">0<em>+</em></div>
+          <div class="stat-div" aria-hidden="true"></div>
+          <div class="stat-l">Projects Completed</div>
+        </div>
+        <div class="fade-up">
+          <div class="stat-n" data-target="12000">0<em>+ km</em></div>
+          <div class="stat-div" aria-hidden="true"></div>
+          <div class="stat-l">Pipeline Surveyed</div>
+        </div>
+        <div class="fade-up">
+          <div class="stat-n" data-target="42">0<em>+</em></div>
+          <div class="stat-div" aria-hidden="true"></div>
+          <div class="stat-l">Countries Served</div>
+        </div>
+        <div class="fade-up">
+          <div class="stat-n" data-target="98">0<em>%</em></div>
+          <div class="stat-div" aria-hidden="true"></div>
+          <div class="stat-l">Client Retention Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+     TESTIMONIALS
+     ════════════════════════════════════════════════════════ -->
+  <section id="testimonials" class="section-pad" aria-labelledby="testi-heading">
+    <div class="container-xl">
+      <div class="sec-head">
+        <div class="badge-label center">Client Voices</div>
+        <h2 class="sec-title" id="testi-heading">Trusted by <span class="grd">Industry Leaders</span></h2>
+        <p class="sec-desc">From North Sea operators to Indo-Pacific maritime agencies — here's what our clients say.
+        </p>
+      </div>
+      <div class="testi-grid stagger">
+
+        <blockquote class="testi-card fade-up">
+          <div class="testi-q" aria-hidden="true">"</div>
+          <p class="testi-txt">GeoTech Pro's SubSea360 platform fundamentally changed how we manage pipeline integrity.
+            We reduced inspection turnaround by 40% and caught a critical anomaly six months before it became a
+            reportable incident.</p>
+          <footer class="testi-auth">
+            <div class="testi-av" aria-hidden="true">JR</div>
+            <div>
+              <div class="testi-name">James Rutherford</div>
+              <div class="testi-role">Head of Integrity, North Sea · Equinor</div>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testi-card fade-up">
+          <div class="testi-q" aria-hidden="true">"</div>
+          <p class="testi-txt">The MapCore platform gave our environmental team spatial capabilities we didn't think
+            were possible offshore. Real-time data fusion from three vessel types, all in one interface. Exceptional
+            delivery.</p>
+          <footer class="testi-auth">
+            <div class="testi-av" aria-hidden="true">SA</div>
+            <div>
+              <div class="testi-name">Dr. Sofia Andersen</div>
+              <div class="testi-role">Chief Data Officer · FUGRO Marine Services</div>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testi-card fade-up">
+          <div class="testi-q" aria-hidden="true">"</div>
+          <p class="testi-txt">SurveyNav Pro is the most capable survey management system we've deployed. Integration
+            with our EIVA NaviModel workflow was seamless and the support team genuinely understands offshore
+            operations.</p>
+          <footer class="testi-auth">
+            <div class="testi-av" aria-hidden="true">MK</div>
+            <div>
+              <div class="testi-name">Mads Kjeldsen</div>
+              <div class="testi-role">Senior Survey Manager · EIVA Maritime</div>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+     CTA
+     ════════════════════════════════════════════════════════ -->
+  <section id="cta" class="section-pad" aria-labelledby="cta-heading">
+    <div class="container-xl">
+      <div class="cta-box fade-up">
+        <div class="badge-label center" style="margin-bottom:20px;">Start Today</div>
+        <h2 id="cta-heading">Ready to See <span class="grd">GeoTech Pro</span> in Action?</h2>
+        <p>Book a personalised demo with one of our solutions engineers and discover how our platforms can transform
+          your operations within weeks — not months.</p>
+        <div class="cta-btns">
+          <a href="pages/contact.html" class="btn-pri">Request a Demo <i class="bi bi-arrow-right"></i></a>
+          <a href="pages/case-studies.html" class="btn-ghost"><i class="bi bi-folder2-open"></i> View Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container-xl">
+      <div class="foot-grid">
+
+        <!-- Brand -->
+        <div>
+          <div class="foot-brand">Geo<span>Tech</span> Pro<small>Intelligence Solutions</small></div>
+          <p class="foot-desc">Delivering precision geospatial, subsea integrity and maritime intelligence to the
+            energy, infrastructure and defence sectors worldwide since 2006.</p>
+          <div class="foot-socials" aria-label="Social media links">
+            <a href="#" class="foot-soc" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="foot-soc" aria-label="X/Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="foot-soc" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="foot-soc" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Solutions -->
+        <div>
+          <h6>Solutions</h6>
+          <ul class="foot-links">
+            <li><a href="pages/solutions.html#gis">GIS Analytics</a></li>
+            <li><a href="pages/solutions.html#subsea">Subsea Integrity</a></li>
+            <li><a href="pages/solutions.html#maritime">Maritime Survey</a></li>
+            <li><a href="pages/solutions.html#construction">Offshore Construction</a></li>
+            <li><a href="pages/solutions.html#digital">Digital Twin</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h6>Company</h6>
+          <ul class="foot-links">
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/case-studies.html">Case Studies</a></li>
+            <li><a href="pages/careers.html">Careers</a></li>
+            <li><a href="pages/about.html#partners">Partners</a></li>
+            <li><a href="pages/about.html#news">News &amp; Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h6>Contact</h6>
+          <ul class="foot-links">
+            <li><a href="pages/contact.html">Get a Demo</a></li>
+            <li><a href="pages/contact.html#support">Technical Support</a></li>
+            <li><a href="pages/contact.html#offices">Our Offices</a></li>
+            <li><a href="pages/contact.html#training">Training</a></li>
+          </ul>
+          <div style="margin-top:20px;">
+            <div class="foot-contact-item"><i class="bi bi-telephone"></i> +44 1224 XXX XXX</div>
+            <div class="foot-contact-item"><i class="bi bi-envelope"></i> info@geotechpro.com</div>
+            <div class="foot-contact-item"><i class="bi bi-geo-alt"></i> Aberdeen · Houston · Singapore</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="foot-bottom">
+        <div class="foot-copy">© 2025 GeoTech Pro Intelligence Solutions Ltd. All rights reserved.</div>
+        <nav class="foot-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Settings</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════
+     SCRIPTS
+     ════════════════════════════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

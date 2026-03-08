@@ -1,0 +1,183 @@
+/*
+ * GEOTECH PRO — responsive.css
+ * Mobile-first responsive breakpoints
+ * Breakpoints: 480 / 576 / 768 / 900 / 1100 / 1380
+ */
+
+/* ═══════════════════════════════════════
+   CONTAINER RESPONSIVE PADDING
+   ═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .container-xl,
+  .container-lg { padding: 0 20px; }
+  .section-pad   { padding: 70px 0; }
+  .section-pad-sm{ padding: 44px 0; }
+}
+@media (max-width: 480px) {
+  .container-xl,
+  .container-lg { padding: 0 16px; }
+  .section-pad   { padding: 56px 0; }
+}
+
+/* ═══════════════════════════════════════
+   NAVBAR
+   ═══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .nav-menu > li > a { padding: 8px 9px; font-size: 0.72rem; }
+}
+@media (max-width: 900px) {
+  .nav-menu { display: none; }
+  .nav-toggle { display: block; }
+  .nav-wrap  { padding: 16px 20px; }
+}
+
+/* ═══════════════════════════════════════
+   THEME SWITCHER
+   ═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .theme-switcher { display: none; }
+}
+
+/* ═══════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .hero-inner { gap: 50px; }
+}
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 130px 20px 60px;
+    text-align: center;
+  }
+  .hero-left { display: flex; flex-direction: column; align-items: center; }
+  .hero-p { max-width: 100%; }
+  .hero-stats-row { justify-content: center; }
+  .badge-label { justify-content: center; }
+  .hero-vis { display: none; }
+}
+@media (max-width: 576px) {
+  .hero-inner { padding: 110px 16px 50px; }
+  .hero-btns  { flex-direction: column; align-items: center; }
+  .hero-btns .btn-pri,
+  .hero-btns .btn-ghost { width: 100%; max-width: 280px; justify-content: center; }
+  .hero-stats-row { gap: 20px; flex-wrap: wrap; justify-content: center; }
+}
+
+/* ═══════════════════════════════════════
+   TRUSTED
+   ═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .trust-logos { gap: 24px; }
+  .trust-item  { font-size: 0.8rem; }
+}
+
+/* ═══════════════════════════════════════
+   SERVICES
+   ═══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .svc-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════
+   WHY US
+   ═══════════════════════════════════════ */
+@media (max-width: 1000px) {
+  .why-grid { grid-template-columns: 1fr; gap: 50px; }
+  .why-side-badge { position: relative; bottom: auto; right: auto; width: auto; margin-top: 20px; display: inline-block; }
+}
+
+/* ═══════════════════════════════════════
+   SOLUTIONS
+   ═══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .sol-grid { grid-template-columns: 1fr; }
+  .sol-card.wide { grid-column: span 1; display: block; }
+  .sol-card.wide .sol-img { height: 200px; }
+  .sol-header { flex-direction: column; align-items: flex-start; }
+}
+
+/* ═══════════════════════════════════════
+   STATS
+   ═══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .stat-n { font-size: 2.4rem; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .stat-n { font-size: 2rem; }
+}
+
+/* ═══════════════════════════════════════
+   TESTIMONIALS
+   ═══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .testi-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════
+   CTA
+   ═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .cta-box { padding: 44px 28px; }
+  .cta-btns { flex-direction: column; align-items: center; }
+  .cta-btns .btn-pri,
+  .cta-btns .btn-ghost { width: 100%; max-width: 280px; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .cta-box { padding: 36px 20px; }
+}
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+@media (max-width: 600px) {
+  .foot-grid { grid-template-columns: 1fr; gap: 30px; }
+  .foot-bottom { flex-direction: column; text-align: center; }
+  .foot-legal  { justify-content: center; }
+}
+
+/* ═══════════════════════════════════════
+   SECTION HEADERS
+   ═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .sec-head { margin-bottom: 40px; }
+  .badge-label { font-size: 0.65rem; }
+}
+
+/* ═══════════════════════════════════════
+   FLOATING HERO BADGES (responsive positioning)
+   ═══════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .f-badge.t { right: -10px; }
+  .f-badge.b { left: -10px; }
+}
+
+/* ═══════════════════════════════════════
+   TYPOGRAPHY SCALE
+   ═══════════════════════════════════════ */
+@media (max-width: 480px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.7rem; }
+  h3 { font-size: 1.15rem; }
+}
+
+/* ═══════════════════════════════════════
+   PRINT
+   ═══════════════════════════════════════ */
+@media print {
+  #mainNav, #preloader, .theme-switcher, .m-nav,
+  .orb, .hero-grid { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .hero-inner { padding-top: 20px !important; grid-template-columns: 1fr !important; }
+}
